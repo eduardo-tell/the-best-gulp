@@ -1,4 +1,14 @@
 {
-    "presets": [ "@babel/preset-env" ],
-    "plugins": [ "@babel/plugin-transform-runtime" ]
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": "> 0.5%, not dead"
+            }
+        ],
+        [
+            "minify"
+        ]
+    ],
+    "comments": false
 }
