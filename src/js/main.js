@@ -1,3 +1,3 @@
-import { start } from './components/slider';
+import { start } from './components/list';
 
 start()
