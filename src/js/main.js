@@ -1,6 +1,3 @@
-console.log('Start main...');
-var hello = 2;
+import { start } from './components/slider';
 
-function helloo () {
-    hello = 3
-}
+start()
