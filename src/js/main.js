@@ -1,3 +1,4 @@
 import { start } from './components/list';
 
-start()
+if (1 > 2) start()
+
