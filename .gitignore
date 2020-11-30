@@ -1,4 +1,4 @@
 /node_modules/
-/dist/
+# /dist/
 .babelrc
 package-lock.json
