@@ -14,6 +14,7 @@ module.exports = {
 	"comments": false,
 
 	plugins: [
-		'@babel/plugin-proposal-class-properties'
+		"@babel/plugin-proposal-class-properties",
+		"transform-remove-console"
 	]
 };

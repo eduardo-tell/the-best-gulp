@@ -2,9 +2,7 @@ import gulp from 'gulp';
 import sass from 'gulp-sass';
 import babel from 'gulp-babel';
 import concat from 'gulp-concat';
-import stripDebug from 'gulp-strip-debug';
 import browserSync from "browser-sync";
-import browserify from 'gulp-browserify'
 
 exports.sass = () => (
     gulp.src('./src/scss/**/**')
@@ -14,13 +12,9 @@ exports.sass = () => (
 );
 
 exports.scripts = () => (
-	gulp.src('./src/js/main.js')
-	// .pipe(stripDebug())
+	gulp.src(['./src/js/*/**', './src/js/main.js'])
     .pipe(concat('scripts.min.js'))
 	.pipe(babel())
-	.pipe(browserify({
-		insertGlobals : true
-	}))
     .pipe(gulp.dest('./dist/js'))
 );
 
@@ -34,14 +28,12 @@ gulp.task('serve', () => {
         server: {
             baseDir: './',
             index: 'index.html'
-        },
-        notify: false,
-        injectChanges: true
+        }
     });
 
     gulp.watch('./src/scss/**/**', gulp.series('sass'))
     gulp.watch('./src/js/**/**', gulp.series('scripts'))
-    gulp.watch('./**/**/**').on('change', browserSync.reload);
+    gulp.watch('./**/**/**/**').on('change', browserSync.reload);
 });
 
 gulp.task('default', gulp.series('watch'));

@@ -49,28 +49,28 @@
 // `– main.scss             # Arquivo principal
 
 // Helpers
-@import
-	'helpers/variables',
-	'helpers/animation',
-	'helpers/utils';
+// @import
+// 	'helpers/variables',
+// 	'helpers/animation',
+// 	'helpers/utils';
 
 
 // Base
 @import 
-	'base/typography',
+	// 'base/typography',
 	'base/global';
 
 
-// Components
-@import 
-	'components/buttons';
+// // Components
+// @import 
+// 	'components/buttons';
 
 
-// layout
-@import 
-	'layout/header',
-	'layout/footer',
-	'layout/forms';
+// // layout
+// @import 
+// 	'layout/header',
+// 	'layout/footer',
+// 	'layout/forms';
 
 
 // Pages
